@@ -10,6 +10,7 @@ import Login from "./Views/Login";
 import Footer from "./Views/Footer";
 import { useEffect } from "react";
 import Home from "./Views/Home";
+import Splash from "./Views/Splash";
 
 const App = () => {
   const ScrollToTop = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="/splash" element={<Splash />} />
         </Routes>
         <Footer />
       </Router>
