@@ -2,71 +2,38 @@ import { useEffect, useState } from "react";
 import background from "../../assets/bgSplash.svg";
 
 // Blom Responsive
-export const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const updatePosition = () => {
-      setScrollPosition(window.pageYOffset);
-    };
-
-    window.addEventListener("scroll", updatePosition);
-
-    updatePosition();
-
-    return () => window.removeEventListener("scroll", updatePosition);
-  }, []);
-
-  return scrollPosition;
-};
 
 const Landing = () => {
-  const [fixed, setFixed] = useState(false);
-
-  useEffect(() => {
-    const toggleBackground = () => {
-      if (window.scrollY > 100) {
-        setFixed(true);
-      } else {
-        setFixed(false);
-      }
-    };
-    window.addEventListener("scroll", toggleBackground);
-    return () => {
-      window.removeEventListener("scroll", toggleBackground);
-    };
-  }, []);
-
   return (
     <>
-      <div className="relative h-screen">
-        <img
-          src={background}
-          alt=""
-          className={`${
-            fixed ? `absolute top-[100px]` : "fixed"
-          } w-full z-0 transition-all`}
-        />
-        <div className="w-full h-[70vh] flex items-center text-white z-10 absolute pl-20">
-          <div className="w-full">
-            <div className="lg:text-5xl text-3xl font-bold w-fit">SIMA UB</div>
-            <div className="lg:text-3xl text-xl w-fit">
-              Sistem Informasi Monitoring Mahasiswa Universitas Brawijaya
-            </div>
-            <div className="text-xl w-6/12 text-white mt-16">
-              Memantau dan mengelola data mahasiswa serta menyediakan informasi
-              terkait perkembangan akademik di lingkungan universitas. Dengan
-              akses untuk orang tua mahasiswa.
-            </div>
-            <button className="w-full mt-16">
-              <div className="w-3/12 bg-cust-primary400 text-white font-bold py-4 rounded-xl">
-                Masuk
-              </div>
-            </button>
+      <div
+        className="xl:h-[90vh] lg:h-[80vh] md:h-[40vh] sm:h-[50vh] h-[80vh] font-montserrat xl:bg-contain bg-no-repeat bg-top"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <div className="w-full xl:pt-32 lg:pt-20 sm:pt-16 pt-40 text-white">
+          <div className="xl:text-7xl lg:text-6xl sm:text-3xl text-5xl font-bold w-fit mx-auto">
+            SIMA UB
+          </div>
+          <div className="xl:text-4xl lg:text-3xl text-xl sm:w-fit w-10/12 text-center lg:pt-10 md:pt-6 sm:pt-4 pt-6 mx-auto font-medium">
+            Sistem Informasi Monitoring Mahasiswa
+          </div>
+          <div className="xl:text-4xl lg:text-3xl text-xl w-fit text-center mx-auto font-medium">
+            Universitas Brawijaya
+          </div>
+
+          <div className="sm:w-2/12 w-4/12 cursor-pointer text-center mx-auto hover:bg-transparent border-2 border-white hover:text-white duration-300 text-cust-primary400 bg-white font-bold lg:py-3 md:py-2 py-2 rounded-xl lg:mt-12 md:mt-8 sm:mt-4 mt-28">
+            <buton className="lg:text-2xl sm:text-lg text-base">Masuk</buton>
           </div>
         </div>
       </div>
+      <div className="lg:w-2/12 sm:w-4/12 w-5/12 h-1 bg-cust-primary400 mx-auto mb-10 mt-10"></div>
+      <div className="lg:text-xl md:text-lg sm:text-base lg:w-6/12 sm:w-10/12 mx-auto text-cust-primary400 text-center mb-16">
+        Memantau dan mengelola data mahasiswa serta menyediakan informasi
+        terkait perkembangan akademik di lingkungan universitas. Dengan akses
+        untuk orang tua mahasiswa.
+      </div>
     </>
+    //
   );
 };
 

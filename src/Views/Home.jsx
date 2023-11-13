@@ -1,7 +1,11 @@
+import Berita from "../Component/DashboardComponent/Berita";
+import Dashboard from "../Component/DashboardComponent/Dashboard";
+
 const Home = () => {
   return (
     <>
-      <div className="text-cust-primary400">Ini Home</div>
+      <Dashboard />
+      <Berita />
     </>
   );
 };
