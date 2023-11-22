@@ -22,21 +22,23 @@ const dataBerita = [
 const Berita = () => {
   return (
     <>
-      <div className="font-montserrat w-full px-10 pb-10">
-        <div className="text-cust-primary500 w-11/12 font-bold text-4xl">
-          Berita
-        </div>
+      <div
+        className="font-montserrat w-full px-10 pb-20 bg-cover"
+      >
         <div className="w-full flex flex-wrap pt-10 justify-between md:px-10 px-0">
+          <div className="text-cust-primary500 w-11/12 font-bold text-4xl">
+            Berita
+          </div>
           {dataBerita.map((item, i) => (
             <div
-              className="xl:w-1/4 md:w-5/12 sm:w-8/12 w-9/12 drop-shadow-xl shadow-xl bg-white rounded-b-lg pb-4 lg:mt-4 mt-6 md:mx-0 mx-auto"
+              className="group cursor-pointer xl:w-1/4 md:w-5/12 sm:w-8/12 w-9/12 drop-shadow-lg shadow-2xl bg-white rounded-b-lg pb-4 lg:mt-4 mt-6 md:mx-0 mx-auto"
               key={i}
             >
               <img src={item.gambar} alt="" className="w-full" />
               <div className="font-bold w-10/12 mx-auto mt-4 md:text-xl text-lg">
                 {item.deskripsi}
               </div>
-              <div className="group flex mt-4 w-10/12 mx-auto cursor-pointer">
+              <div className="flex mt-4 w-10/12 mx-auto ">
                 <div className="text-sm group-hover:translate-x-0 -translate-x-4 opacity-0 group-hover:opacity-100 duration-300">
                   Selengkapnya
                 </div>

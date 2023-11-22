@@ -2,7 +2,15 @@ import ipk_icon from "../../assets/ipk_icon.svg";
 import absensi_icon from "../../assets/absensi_icon.svg";
 import aktivitas_icon from "../../assets/aktivitas_icon.svg";
 import tugas_icon from "../../assets/tugas_icon.svg";
-import { ArrowRight, ArrowUp, ArrowDown, Check } from "react-feather";
+import grafik from "../../assets/grafik.svg";
+import {
+  ArrowRight,
+  ArrowUp,
+  ArrowDown,
+  Check,
+  ChevronDown,
+  Clock,
+} from "react-feather";
 
 const dataDashboard = [
   {
@@ -38,11 +46,11 @@ const dataDashboard = [
 const Dashboard = () => {
   return (
     <>
-      <div className="font-montserrat w-full py-10 px-10">
-        <div className="text-cust-primary500 w-11/12 font-bold text-4xl">
-          Dashboard
-        </div>
+      <div className="font-montserrat w-full py-10 px-10 bg-cover">
         <div className="flex flex-wrap w-full pt-4 sm:justify-between md:px-10 px-0">
+          <div className="text-cust-primary500 w-11/12 font-bold text-4xl">
+            Dashboard
+          </div>
           {dataDashboard.map((item, i) => (
             <div
               className="xl:w-1/5 sm:w-fit w-5/12 mt-4 bg-cust-primary350 p-5 rounded-lg sm:mx-0 mx-auto"
@@ -94,6 +102,59 @@ const Dashboard = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="lg:flex mt-8">
+          <div className="p-5 lg:w-7/12 w-full mx-auto shadow-[4px_4px_8px_0px_rgba(0,0,0,0.15)]">
+            <div className="w-fit mx-auto text-cust-primary500 font-semibold text-2xl mb-10">
+              IP Semester
+            </div>
+            <img src={grafik} alt="" className="mx-auto sm:w-9/12 mt-auto " />
+          </div>
+          <div className="p-5 lg:w-4/12 w-full lg:mt-0 mt-10 mx-auto shadow-[4px_4px_8px_0px_rgba(0,0,0,0.15)]">
+            <div className="w-fit mr-auto text-cust-primary500 font-semibold text-2xl">
+              Kalender
+            </div>
+            <div className="flex justify-between">
+              <div className="text-gray-500">3 Kegiatan hari ini</div>
+              <div className="flex">
+                <div className="text-sm">Hari ini</div>{" "}
+                <ChevronDown className="w-4" />
+              </div>
+            </div>
+            <div className="w-10/12 bg-cust-primary350 rounded-lg p-5 mx-auto mt-5">
+              <div className="text-white font-semibold sm:text-base text-sm">
+                Basis Data
+              </div>
+              <div className="flex text-white ">
+                <Clock className="sm:w-4 w-3" />
+                <div className="sm:text-xs text-[10px] my-auto ml-2">
+                  7.00 - 9.30, 3 sks
+                </div>
+              </div>
+            </div>
+            <div className="w-10/12 bg-cust-primary100 rounded-lg p-5 mx-auto mt-5">
+              <div className="text-cust-primary350 font-semibold sm:text-base text-sm">
+                Interaksi Manusia dan Komputer
+              </div>
+              <div className="flex text-cust-primary350">
+                <Clock className="sm:w-4 w-3" />
+                <div className="sm:text-xs text-[10px] my-auto ml-2">
+                  10.00 - 11.30, 3 sks
+                </div>
+              </div>
+            </div>
+            <div className="w-10/12 bg-cust-primary100 rounded-lg p-5 mx-auto mt-5">
+              <div className="text-cust-primary350 font-semibold sm:text-base text-sm">
+                Kecerdasan Buatan
+              </div>
+              <div className="flex text-cust-primary350">
+                <Clock className="sm:w-4 w-3" />
+                <div className="sm:text-xs text-[10px] my-auto ml-2">
+                  12.50 - 15.30, 3 sks
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

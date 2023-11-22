@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
 import background from "../../assets/bgSplash.svg";
-
-// Blom Responsive
 
 const Landing = () => {
   return (
