@@ -48,7 +48,7 @@ const Dashboard = () => {
     <>
       <div className="font-montserrat w-full py-10 px-10 bg-cover">
         <div className="flex flex-wrap w-full pt-4 sm:justify-between md:px-10 px-0">
-          <div className="text-cust-primary500 w-11/12 font-bold text-4xl">
+          <div className="text-cust-primary500 w-11/12 font-bold text-4xl pt-5">
             Dashboard
           </div>
           {dataDashboard.map((item, i) => (
