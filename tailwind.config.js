@@ -14,6 +14,7 @@ export default {
         "cust-primary500": "#20274A",
         "cust-primary200": "#5C6ED2",
         "cust-primary100": "#E7E9F8",
+        "cust-primary150": "#CCD2F1",
         "cust-primary350": "#45539E",
         "cust-success450": "#226328",
         "cust-success100": "#E4FAE6",
