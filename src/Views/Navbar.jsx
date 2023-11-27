@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import profile from "../assets/profile.svg";
+
 const Navbar = () => {
   return (
     <>
@@ -25,22 +28,19 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Dashboard</a>
+                <a href="/#/dashboard">Dashboard</a>
               </li>
               <li>
-                <a>Student Report</a>
+                <a href="/#/report">Student Report</a>
               </li>
               <li>
-                <a>Schedule</a>
+                <a href="/#/task">Tasks</a>
               </li>
               <li>
-                <a>Tasks</a>
+                <a href="/#/activity">Activity</a>
               </li>
               <li>
-                <a>Activity</a>
-              </li>
-              <li>
-                <a>Absence</a>
+                <a href="/#/absence">Absence</a>
               </li>
             </ul>
           </div>
@@ -49,35 +49,51 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
             <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">
+              <a
+                href="/#/dashboard"
+                className="hover:text-cust-primary400 duration-300"
+              >
                 Dashboard
               </a>
             </li>
             <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">
+              <a
+                href="/#/report"
+                className="hover:text-cust-primary400 duration-300"
+              >
                 Student Report
               </a>
             </li>
             <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">
-                Schedule
+              <a
+                href="/#/task"
+                className="hover:text-cust-primary400 duration-300"
+              >
+                Tasks
               </a>
             </li>
             <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">Tasks</a>
-            </li>
-            <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">
+              <a
+                href="/#/activity"
+                className="hover:text-cust-primary400 duration-300"
+              >
                 Activity
               </a>
             </li>
             <li className="hover:bg-white rounded-full duration-300">
-              <a className="hover:text-cust-primary400 duration-300">Absence</a>
+              <a
+                href="/#/absence"
+                className="hover:text-cust-primary400 duration-300"
+              >
+                Absence
+              </a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link to="/profile">
+            <img src={profile} alt="" />
+          </Link>
         </div>
       </div>
     </>

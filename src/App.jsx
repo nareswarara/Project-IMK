@@ -13,6 +13,10 @@ import Home from "./Views/Home";
 import Splash from "./Views/Splash";
 import Profile from "./Views/Profile";
 import Task from "./Views/Task";
+import StudentReport from "./Views/StudentReport";
+import Absence from "./Views/Absence";
+import StudentActivity from "./Views/StudentActivity";
+import Chat from "./Views/Chat";
 
 const App = () => {
   const ScrollToTop = () => {
@@ -28,9 +32,13 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/task" element={<Task />} />
+            <Route path="/report" element={<StudentReport />} />
+            <Route path="/absence" element={<Absence />} />
+            <Route path="/activity" element={<StudentActivity />} />
+            <Route path="/chat" element={<Chat />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/splash" element={<Splash />} />
