@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import background from "../../assets/bgSplash.svg";
 
 const Landing = () => {
@@ -18,9 +19,11 @@ const Landing = () => {
             Universitas Brawijaya
           </div>
 
-          <div className="sm:w-2/12 w-4/12 cursor-pointer text-center mx-auto hover:bg-transparent border-2 border-white hover:text-white duration-300 text-cust-primary400 bg-white font-bold lg:py-3 md:py-2 py-2 rounded-xl lg:mt-12 md:mt-8 sm:mt-4 mt-28">
-            <buton className="lg:text-2xl sm:text-lg text-base">Masuk</buton>
-          </div>
+          <Link to="/login">
+            <div className="sm:w-2/12 w-4/12 cursor-pointer text-center mx-auto hover:bg-transparent border-2 border-white hover:text-white duration-300 text-cust-primary400 bg-white font-bold lg:py-3 md:py-2 py-2 rounded-xl lg:mt-12 md:mt-8 sm:mt-4 mt-28">
+              <buton className="lg:text-2xl sm:text-lg text-base">Masuk</buton>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="lg:w-2/12 sm:w-4/12 w-5/12 h-1 bg-cust-primary400 mx-auto mb-10 mt-10"></div>

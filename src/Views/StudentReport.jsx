@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -219,7 +220,11 @@ const StudentReport = () => {
           </div>
           <div className="md:flex flex-wrap w-full">
             {selectedData.map((item, index) => (
-              <div className="md:w-6/12 sm:w-10/12  mx-auto mb-10" key={index}>
+              <Link
+                to="/subject/report"
+                className="md:w-6/12 sm:w-10/12  mx-auto mb-10"
+                key={index}
+              >
                 <div className="sm:w-10/12 mx-auto">
                   <div
                     className={`${
@@ -264,7 +269,7 @@ const StudentReport = () => {
                     <div className="mr-5">{item.uas}</div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

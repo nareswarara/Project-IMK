@@ -1,6 +1,7 @@
 import background from "../assets/login.svg";
 import icon_apple from "../assets/apple_icon.png";
 import icon_google from "../assets/google_icon.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -22,11 +23,13 @@ const Login = () => {
               className="border-b-2 border-black w-full pl-2 pb-2"
               type="password"
             />
-            <button className="w-full mt-16">
-              <div className="w-10/12 mx-auto bg-cust-primary400 text-white font-bold py-4 rounded-xl">
-                Masuk
-              </div>
-            </button>
+            <Link to="/dashboard">
+              <button className="w-full mt-16">
+                <div className="w-10/12 mx-auto bg-cust-primary400 text-white font-bold py-4 rounded-xl">
+                  Masuk
+                </div>
+              </button>
+            </Link>
           </div>
           <div className="lg:block flex lg:w-2/12 w-8/12 lg:mt-0 mt-16 mx-auto">
             <div className="lg:w-[0.8px] w-4/12 lg:h-24 h-[0.8px] bg-black mx-auto lg:mt-0 mt-3"></div>

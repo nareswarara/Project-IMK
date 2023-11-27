@@ -11,6 +11,7 @@ import {
   ChevronDown,
   Clock,
 } from "react-feather";
+import { Link } from "react-router-dom";
 
 const dataDashboard = [
   {
@@ -19,6 +20,7 @@ const dataDashboard = [
     arrow: ArrowUp,
     nilai: "3.94",
     nilai2: "10.5%",
+    link: "",
   },
   {
     icon: absensi_icon,
@@ -26,6 +28,7 @@ const dataDashboard = [
     arrow: ArrowDown,
     nilai: "96%",
     nilai2: "4%",
+    link: "/absence",
   },
   {
     icon: aktivitas_icon,
@@ -33,6 +36,7 @@ const dataDashboard = [
     arrow: ArrowUp,
     nilai: "6",
     nilai2: "2",
+    link: "/activity",
   },
   {
     icon: tugas_icon,
@@ -40,6 +44,7 @@ const dataDashboard = [
     arrow: Check,
     nilai: "8",
     nilai2: "2",
+    link: "/task",
   },
 ];
 
@@ -60,9 +65,11 @@ const Dashboard = () => {
                 <img src={item.icon} alt="" className="sm:block hidden" />
                 <div className="text-white sm:hidden block">{item.nama}</div>
                 <div>
-                  <button>
-                    <ArrowRight color="white" />
-                  </button>
+                  <Link to={item.link}>
+                    <button>
+                      <ArrowRight color="white" />
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="text-white pt-3 sm:block hidden">{item.nama}</div>
