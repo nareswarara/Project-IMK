@@ -18,6 +18,7 @@ import Absence from "./Views/Absence";
 import StudentActivity from "./Views/StudentActivity";
 import Chat from "./Views/Chat";
 import SubjectReport from "./Views/SubjectReport";
+import NotFound from "./Views/NotFound";
 
 const App = () => {
   const ScrollToTop = () => {
@@ -44,6 +45,7 @@ const App = () => {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Splash />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
